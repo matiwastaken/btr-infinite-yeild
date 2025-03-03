@@ -12,12 +12,12 @@ Players = cloneref(game:GetService("Players"))
 if not game:IsLoaded() then
     local notLoaded = Instance.new("Message")
     notLoaded.Parent = COREGUI
-    notLoaded.Text = "Infinite Yield is waiting for the game to load"
+    notLoaded.Text = "Btr Infinite Yield is waiting for the game to load"
     game.Loaded:Wait()
     notLoaded:Destroy()
 end
 
-currentVersion = "6.3"
+currentVersion = "btr-1.0"
 
 Holder = Instance.new("Frame")
 Title = Instance.new("TextLabel")
@@ -618,7 +618,7 @@ Credits.Position = UDim2.new(0, 0, 0.9, 30)
 Credits.Size = UDim2.new(0, 250, 0, 20)
 Credits.Font = Enum.Font.SourceSansLight
 Credits.FontSize = Enum.FontSize.Size18
-Credits.Text = "Edge // Zwolf // Moon // Toon"
+Credits.Text = "Forked by matiwastaken"
 Credits.TextColor3 = Color3.new(1, 1, 1)
 Credits.ZIndex = 10
 
@@ -10176,6 +10176,10 @@ addcmd("console", {}, function(args, speaker)
     StarterGui:SetCore("DevConsoleVisible", true)
 end)
 
+addcmd("examplecmd", {}, function(args, speaker)
+    StarterGui:SetCore("DevConsoleVisible", true)
+end)
+
 addcmd('oldconsole',{},function(args, speaker)
 	-- Thanks wally!!
 	notify("Loading",'Hold on a sec')
@@ -10286,14 +10290,14 @@ addcmd('olddex', {'odex'}, function(args, speaker)
 end)
 
 addcmd('remotespy',{'rspy'},function(args, speaker)
-	notify("Loading",'Hold on a sec')
+	notify("SimpleSpy || iy",'SimpleSpy might not work on your executor!')
 	-- Full credit to exx, creator of SimpleSpy
 	-- also thanks to NoobSploit for fixing
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/SimpleSpyV3/main.lua"))()
 end)
 
 addcmd('audiologger',{'alogger'},function(args, speaker)
-	notify("Loading",'Hold on a sec')
+	notify("AudioLogger || iy",'Hold on a sec')
 	loadstring(game:HttpGet(('https://raw.githubusercontent.com/infyiff/backup/main/audiologger.lua'),true))()
 end)
 
@@ -10488,7 +10492,7 @@ function getTorso(x)
 	return x:FindFirstChild("Torso") or x:FindFirstChild("UpperTorso") or x:FindFirstChild("LowerTorso") or x:FindFirstChild("HumanoidRootPart")
 end
 
-addcmd("bang", {"rape"}, function(args, speaker)
+addcmd("bang", "fuck", {"rape"}, function(args, speaker)
 	execCmd("unbang")
 	wait()
 	local humanoid = speaker.Character:FindFirstChildWhichIsA("Humanoid")
@@ -10572,6 +10576,7 @@ addcmd('friend',{},function(args, speaker)
 end)
 
 addcmd('unfriend',{},function(args, speaker)
+	notify("BetterIy || iy",'this might not work. didint test but yeah')
 	local players = getPlayer(args[1], speaker)
 	for i,v in pairs(players)do
 		speaker:RevokeFriendship(v)
@@ -10759,7 +10764,7 @@ addcmd('uninstantproximityprompts',{'uninstantpp'},function(args, speaker)
 end)
 
 addcmd('notifyping',{'ping'},function(args, speaker)
-	notify("Ping", math.round(speaker:GetNetworkPing() * 1000) .. "ms")
+	notify("Ping || BtrIY", math.round(speaker:GetNetworkPing() * 1000) .. "ms") -- improved this
 end)
 
 addcmd('grabtools', {}, function(args, speaker)
@@ -10780,7 +10785,7 @@ addcmd('grabtools', {}, function(args, speaker)
 		end
 	end)
 
-	notify("Grabtools", "Picking up any dropped tools")
+	notify("Grabtools || BtrIY", "Picking up any dropped tools")
 end)
 
 addcmd('nograbtools',{'ungrabtools'},function(args, speaker)
